@@ -5,7 +5,7 @@
 /* ---------- Color palettes (edit here) ---------- */
 :root{
   /* Primary palette (default = dark-friendly) */
-  --bg: white;            /* page background (nearly black) */
+  --bg: black;            /* page background (nearly black) */
   --card-bg: #9b5de0;       /* sections/cards */
   --muted: black;         /* secondary text */
   --text: black;          /* main text */
@@ -21,7 +21,7 @@
 
 /* Optional light theme — add class "light" to <body> to toggle */
 body.light {
-  --bg: #f6f8fb;
+  --bg: black;
   --card-bg: #ffffff;
   --muted: #667085;
   --text: #0b1220;
@@ -48,7 +48,7 @@ body.light {
 }
 }
 .sidebar {
-  background: linear-gradient(180deg, #9b5de5, #6a4c93);
+  background: linear-gradient(180deg, #5dbae5, #4c8e93);
   padding: 20px;
   border-radius: 20px;
 } 
@@ -61,7 +61,7 @@ html,body{height:100%}
 body{
   margin:0;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: linear-gradient(180deg,var(--bg), white);
+  background: linear-gradient(180deg,var(--bg)gray);
   color:var(--text);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -185,7 +185,7 @@ body{
   padding:10px 14px;
   border-radius:10px;
   background: linear-gradient(90deg,var(--accent), var(--accent-2));
-  color:#3b0270;
+  color:#02706a;
   font-weight:700;
   text-decoration:none;
   border:none;
@@ -262,38 +262,38 @@ input:focus, textarea:focus{
 .skip-link:focus{
   left:12px; top:12px; width:auto; height:auto; padding:8px 12px; background:var(--card-bg); color:var(--text); z-index:9999;
 }
-#portfolio { background: linear-gradient(180deg,purple); }
+#portfolio { background: linear-gradient(180deg,rgb(0, 124, 128)); }
 #snapfolio { background-color: #3b0270;}
-#skills { background: linear-gradient(purple);}
+#skills { background: linear-gradient(rgb(0, 124, 128));}
 #home { background: linear-gradient(#f6c85f);}
 #hero {
-  background: linear-gradient(135deg, purple); }
+  background: linear-gradient(135deg, rgb(0, 124, 128)); }
   #about{
-    background: linear-gradient(purple);
+    background: linear-gradient(rgb(0, 124, 128));
   }
-  #stats{ background: linear-gradient(purple);}
+  #stats{ background: linear-gradient(rgb(0, 124, 128));}
 
-  #resume{ background: linear-gradient(purple);}
-  #Container{ background: linear-gradient(purple);}
-  #testimonials{ background: linear-gradient(purple);}
-  #contact{ background: linear-gradient(purple);}
-  #footer{ background: linear-gradient(purple);}
+  #resume{ background: linear-gradient(rgb(0, 124, 128));}
+  #Container{ background: linear-gradient(rgb(0, 124, 128));}
+  #testimonials{ background: linear-gradient(rgb(0, 124, 128));}
+  #contact{ background: linear-gradient(rgb(0, 124, 128));}
+  #footer{ background: linear-gradient(rgb(0, 124, 128));}
   
 
 a, .btn-primary {
-  background-color: #d78fee;
+  background-color:#8fe3eead;;
   color: #fff;
   border: none;
   a, .btn-primary{
     text-decoration: none;
-    color: black;
+    color: white;
   }     
 }
 
 a:hover, .btn-primary:hover {
-  background-color: #d78fee;
+  background-color: #8fe3eead;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 /* ====== SCROLL BUTTON ====== */
 #scroll-top {
