@@ -7,7 +7,7 @@
   <title> Swetha - Portfolio</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-
+  
   <!-- Favicons -->
    <link rel="stylesheet" href="swe.css">
   <link href="assets/img/favicon.png" rel="icon">
@@ -56,10 +56,10 @@
       <div class="social-links text-center">
         
         <a href="https://wa.me/+919043590064" target="_blank"><i class="bi bi-whatsapp"></i></a>
-       <a href="https://www.instragram.com/doll26301" target="_blank"><i class="bi bi-instagram"></i></a>
+       <a href= "https://www.instagram.com/doll26301" target="_blank" class="bi bi-instagram"></a>
       
       
-        <a href="https://www.linkedin.com/Swetha Durai murugan" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.linkedin.com/Swetha-Durai-murugan" target="_blank"><i class="bi bi-linkedin"></i></a>
       </div>
 
     </div>
@@ -85,7 +85,7 @@
               <div class="hero-text">
                 <h1>Port<span class="accent-text">Folio</span></h1>
                 <h2>Swetha duraimurugan</h2>
-                <p class="lead">I'm a <span class="typed" data-typed-items="Web Developer, Frontend Designer, Programmer, Full Stack Learner, Problem Solver"></span></p>
+                <p class="lead">I'm a <span class="typed" data-typed-items="Web Developer, Frontend Designer, Programmer, Full Stack developer, Problem Solver"></span></p>
                 <p class="description">Passionate Full-Stack Developer and Creative Web Designer, building responsive, user-friendly web applications and turning ideas into interactive digital experiences.</p>
 
                 <div class="hero-actions">
@@ -148,7 +148,7 @@
                     <i class="bi bi-telephone"></i>
                     +91 90435 90064
                   </a>
-                  <a href="#" class="contact-item">
+                  <a href="https://maps.app.goo.gl/YTLieJLuzzGDFjaQ9" class="contact-item">
                     <i class="bi bi-geo-alt"></i>
                     Tambaram,Chennai-48
                   </a>
@@ -160,8 +160,8 @@
           <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
             <div class="about-content">
               <div class="section-header">
-                <span class="badge-text">Get to Know Me</span>
-                <h2>Fresher| Full-Stack Learner| Creative Web Designer</h2>
+                <span class="badge-text">About Me</span>
+                <h2>Fresher| Full-Stack developer| Creative Web Designer</h2>
               </div>
 
               <div class="description">
@@ -343,7 +343,7 @@
                 <h3>TECHNICAL SKILLS</h3>
                 <div class="skill-item">
                   <div class="d-flex justify-content-between">
-                    <span>Full Stack Development</span>
+                    <span>Frontend Development</span>
                     <span>80%</span>
                   </div>
                   <div class="progress">
@@ -373,7 +373,7 @@
 
                 <div class="skill-item">
                   <div class="d-flex justify-content-between">
-                    <span>Project Management</span>
+                    <span>HTML,CSS</span>
                     <span>80%</span>
                   </div>
                   <div class="progress">
@@ -458,6 +458,7 @@
                   <i class="bi bi-geo-alt"></i>
                 </div>
                 <div class="content">
+                  
                   <h4>Our Location</h4>
                   <p>Mudichur</p>
                   <p>Tambaram, Chennai-600048</p>
@@ -470,7 +471,7 @@
                 </div>
                 <div class="content">
                   <h4>Phone Number</h4>
-                  <p>91+ 9043590064</p>
+                  <p>91+ 90435 90064</p>
                 </div>
               </div>
 
@@ -491,31 +492,45 @@
               <h3>Get In Touch</h3>
               <!-- <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p> -->
 
-              <form action="forms/contact.php" method="post" class="php-email-form">
-                <div class="row gy-4">
+              <form id="contact-form">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" placeholder="Subject" required></textarea>
+    <textarea id="message" placeholder="Your Message" required></textarea>
+    <button onclick="sendMail()">Send Message</button>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                  </div>
 
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                  </div>
 
-                  <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                  </div>
+<script>
+  (function() {
+      emailjs.init({
+          publicKey: "d55yWL1NRGZJTAUxO",
+      });
+  })();
 
-                  <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                  </div>
+  function sendMail() {
+      let params = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          message: document.getElementById("message").value,
+      };
 
-                  <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                    <button type="submit" class="btn">Send Message</button>
+      emailjs.send("service_jk5g8wl", "template_urwxsdn", params)
+      .then(function(response) {
+          console.log("SUCCESS!", response.status, response.text);
+          alert("Message sent successfully!");
+      })
+      .catch(function(error) {
+          console.log("EmailJS Error:", error);
+          alert("Failed to send message: " + error.text);
+      });
+  }
+</script>
+<div id="notification"></div>
+                    
+                    
                   </div>
 
                 </div>
